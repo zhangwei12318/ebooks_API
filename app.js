@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 //配置解析token的中间件
 const { expressjwt: jwt } = require("express-jwt");
 const config=require('./config');
-app.use(jwt({secret: config.jwtSecretKey,algorithms: ["HS256"]}).unless({ path: [/^\/reguser/] }))
+// app.use(jwt({secret: config.jwtSecretKey,algorithms: ["HS256"]}).unless({ path: [/^\/reguser/] }))
 
 //导入并使用级联导航路由
 const typeNavRouter = require("./router/typeNav");
